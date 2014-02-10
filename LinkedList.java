@@ -63,10 +63,8 @@ public class LinkedList<E> implements IList<E> {
 				}
 			removeOk = false;
 			posToRemove--;
-
-
+			}
 		}
-	}
 	
         		
         		
@@ -81,9 +79,9 @@ public class LinkedList<E> implements IList<E> {
 		if(item.equals(null))
 			throw new IllegalArgumentException("item != null");
 			
-		//if(size == 0)
-			//addFirst(item);
-		//else
+		if(size == 0)
+			addFirst(item);
+		else
 			addLast(item);
 	}
 
@@ -283,7 +281,7 @@ public class LinkedList<E> implements IList<E> {
 			size--;
 			return tempNode.getData();
 		}
-}
+	}
 	
 	/**
      * Helper method for remove called if pos > middle of list.
